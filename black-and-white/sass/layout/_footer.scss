@@ -1,0 +1,57 @@
+.footer{
+    // height: 30vh !important;
+    padding: 2rem;
+    // margin-top: 10rem;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    @include respond(tab-land){
+        height: 50vh !important;
+        // margin-top: 10rem !important;
+    }
+    @include respond(tab-port){
+        // margin-top: 20rem !important;
+    }
+    &__row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+    }
+    .footer-heading span{
+        display: block;
+        height: .1rem;
+        background-color: $color-white;
+        margin: 1.5rem 0;
+    }
+    .footer-heading span:nth-child(1){width: 10%;}
+    .footer-heading span:nth-child(0){width: 10%;}
+
+    &__box{
+        width: 30%;
+        position: relative;
+
+        @include respond(tab-port){
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+    &__list ul{
+        list-style: none;
+    }
+    &__item{
+        text-transform: capitalize;
+    }
+    &__link{
+        padding: 1rem 2rem;
+    }
+    &__img{
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}

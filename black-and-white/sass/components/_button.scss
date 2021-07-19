@@ -1,0 +1,43 @@
+.btn{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 1rem;
+        transition: all .2s;
+        font-size: $dfont;
+        position: relative;
+        letter-spacing: .1rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover{
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .32);
+
+        &::after{
+            transform: scale(1.52);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .32);
+    }
+
+
+}
+.header__text-box button{
+    width: 30%;
+    @include respond(tab-port){
+        width: 50%;
+        align-self: center;
+        margin-top: 2rem;
+    }
+}

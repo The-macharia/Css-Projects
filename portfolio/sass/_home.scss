@@ -1,0 +1,243 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+
+
+/**********navigation****************/
+.navigation{
+    color: white;
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        padding: 3rem;
+
+        @include respond(phone){
+            padding: 1rem 0 0 0;
+        }
+
+    }
+    &__item{
+        text-transform: capitalize;
+    }
+
+    &__link:link,
+    &__link:visited{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: $color-white;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 2rem;
+        transition: all .4s;
+        background-image: linear-gradient(120deg, transparent 0%,   transparent 50%, $color-white 50%);
+        background-size: 230%;
+
+        @include respond(big-desktop){
+            font-size: 4rem;
+        }
+
+        &:hover{
+            background-position: 100%;
+            color: $color-primary;
+            transform: scale(1.1);
+            box-shadow: 0 1rem 3rem rgba($color-black, .3);
+        }
+
+        &:active{
+            transform: translateY(5px);
+            
+            @include respond(tab-port){
+                transform: translateY(2px);
+            }
+        }
+    }
+    &:hover &__link:not(:hover){
+        transform: scale(.8);
+    }
+}
+
+
+
+/**********text box****************/
+.text-box{
+    //background-color: white;
+    flex: 0 0 50%;
+    align-self: center;
+
+    &__text{
+        //color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        //text-align: center;
+        justify-content: center;
+        height: 50%; 
+        transition: all .3s;
+
+        &--main{      
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2rem;
+            text-align: center;      
+            animation: moveInLeft 4s;
+            margin-bottom: .5rem;
+            background-image: linear-gradient(to bottom, $color-white, $color-white-dark);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            @include respond(tab-port){
+                font-size: 1.8rem;
+                letter-spacing: 1.6rem;
+            }
+            @include respond(phone){
+                font-size: 1.5rem;
+                letter-spacing: 1rem;
+            }
+        }
+
+        &--sub{   
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2rem;
+            text-align: center;
+            animation: moveInRight 3s;
+            margin-top: .5rem;
+            background-image: linear-gradient(to top, $color-white, $color-white-dark);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            @include respond(tab-port){
+                font-size: 1.2rem;
+                letter-spacing: 1.6rem;
+            }
+            @include respond(phone){
+                font-size: 1rem;
+                letter-spacing: 1rem;
+            }
+        }
+    }
+
+    &__location{
+        //background-color: greenyellow;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    &__location-icon{
+        width: 3rem;
+        height: 3rem;
+        fill: $color-greyish;
+        border-radius: 50%; 
+        margin-bottom: 2rem;
+
+        transition: all 1s;
+        animation: pulsate 1s 6s infinite;
+    }
+    
+    &__location-text{
+        font-size: 2rem;
+        text-transform: capitalize;
+        color:$color-primary-light;
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+
+        }
+    }
+}
+
+
+
+/**********social****************/
+.social{
+    //background-color: orangered;
+
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem;
+
+        @include respond(tab-port){
+            padding: 1rem;
+        }
+    }
+    
+    &__item{
+        text-transform: capitalize;
+
+        &:not(:last-child){margin-right: 10rem;
+            @include respond(phone){
+                margin-right: 5rem;
+            }
+        }
+    }
+
+    &__link:link,
+    &__link:visited{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: transparent;
+        background-image: linear-gradient(to right, $color-white, $color-primary-light);
+        -webkit-background-clip: text;
+        background-clip: text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .4s;
+        border-radius: .5rem;
+
+        @include respond(phone){
+            font-size: 1.3rem;
+        }
+
+        &:hover{
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 1rem 3rem rgba($color-black, .3);
+        }  
+        
+        &:active{
+            transform: translateY(5px);
+
+            @include respond(tab-port){
+                transform: translateY(2px);
+            }
+        } 
+    }
+
+    &:hover &__link:not(:hover){
+        transform: scale(.8);
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+        fill: $color-greyish;
+    }
+
+    &__text{
+        margin-top: .7rem;
+    }
+}
+
+a{
+    text-decoration: none;
+}

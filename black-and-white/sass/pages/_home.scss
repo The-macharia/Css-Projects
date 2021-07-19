@@ -1,0 +1,54 @@
+section{
+    height: 85vh;
+
+        // experimental, delete if stuff breaks
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-port){
+        height: auto;
+        margin-top: 5rem;
+    }
+}
+.section-services{
+    background-image: linear-gradient(to top, rgba(0,0,0 , .78), rgba(0,0,0, .93)),
+        url('../../img/im1.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-team{
+    background-image: radial-gradient(rgba(0,0,0 , .89), rgba(0,0,0, .98)),
+        url('https://images.unsplash.com/photo-1492366254240-43affaefc3e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-size: cover;
+}
+
+.donate{
+    height: 30vh;
+    margin-top: 30vh;
+    margin-bottom: 3rem;
+
+    @include respond(tab-port){
+        margin-top: 10vh;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 4rem 2rem;
+        background-color: $color-black;
+
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+    }
+    &__col{
+        padding: 2rem;
+    }
+    &__col p{
+        text-align: center;
+    }
+}

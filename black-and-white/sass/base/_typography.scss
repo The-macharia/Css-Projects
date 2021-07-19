@@ -1,0 +1,129 @@
+body{
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+
+a{
+    text-decoration: none;
+    font-size: $linkfont;
+    padding: 1rem;
+    color: #007A33;
+}
+
+.heading-primary{
+    color: rgba($color-white, .7);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+
+    @include respond(tab-port){
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    &--main{
+        display: block;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: .3rem;
+
+        @include respond(phone){
+            letter-spacing: .74rem;
+            font-size: 3rem;
+        }
+    }
+
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: .4rem;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
+    }
+
+}
+
+.heading-secondary{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+     $color-grey-dark, $color-primary-dark);
+
+    letter-spacing: .2rem;
+    transition: all .2s;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    &:hover{
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary{
+    font-size:$dfont;
+    color: rgba($color-white, .87);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph, p{
+    font-size: $dfont;
+    color: rgba($color-white, .87);
+
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+    @include respond(big-desktop){
+        font-size: $largefont;
+    }
+}
+
+.form__heading{
+    width: 100%;
+    @extend .heading-secondary;
+    text-align: center;
+}
+
+.form__message{
+    text-align: center;
+    font-size: $dfont;
+    font-weight: bold;
+    color: $color-secondary-dark;
+    opacity: 0;
+    transition: all .2s;
+    text-transform: capitalize;
+}
+.contact-heading{
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    color: rgba($color-white, .7);
+}
+
+.contact-info{
+    margin-left: 2rem;
+}
+
+.footer-heading{
+    text-transform: uppercase;
+}
+.section-services p{
+    color: rgba($color-white, .87);
+}

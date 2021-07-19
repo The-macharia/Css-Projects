@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 62.5% ;
+    scroll-behavior: smooth;
+
+    @include respond(big-desktop){
+        font-size: 62.5%;
+    }
+
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+
+}
+
+body{
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    // background-image:linear-gradient(to right bottom,rgba($color-black, 0.8), rgba($color-black, 0.8));
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+}
+.container{
+    background-color: black;
+    z-index: 100;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{
+        width: 2rem;
+    }
+}
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+
+.inviscible{
+    display: none !important;
+}
+

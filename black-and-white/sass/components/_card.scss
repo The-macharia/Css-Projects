@@ -1,0 +1,49 @@
+.team{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
+
+    @include respond(tab-port){
+        flex-direction: column;
+    }
+
+    &__card{
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        width: 40rem;
+        box-shadow: 0 .1rem .2rem rgba($color-black, .35);
+
+        @include respond(tab-port){
+            &:not(:last-child){
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__text{
+        padding: 2rem;
+        text-align: center;
+    }
+    &__text h3{
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__link{
+        text-align: center;
+
+    }
+    &__link a{
+        text-decoration: none;
+        font-size: $dfont;
+        text-transform: capitalize;
+        letter-spacing: .1rem;
+        padding: 1rem 2rem;
+        border: 1px solid black;
+        border-radius: 10rem;
+    }
+}
